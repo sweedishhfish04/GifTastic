@@ -12,7 +12,7 @@ function addButton(topic) {
     $("#" + id).click(function () {
         $("#images").html('')
         $.ajax({
-            url: `http://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${topic}&limit=10`
+            url: `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${topic}&limit=10`
         }).done(function (response) {
             console.log(response)
             response.data.forEach(function (gif) {
